@@ -47,7 +47,7 @@ year = date.split('-')[0]
 titles, artists = get_songs(date)
 
 songs_list = []
-for i, song in enumerate(titles):
+for song in titles:
     result = sp.search(q=f"track:{song} year:{year}", type="track")
     try:
         uri = result["tracks"]["items"][0]["uri"]
